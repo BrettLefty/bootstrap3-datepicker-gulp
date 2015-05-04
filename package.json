@@ -1,7 +1,7 @@
 {
-  "name": "bootstrap-datepicker",
-  "description": "A datepicker for twitter bootstrap forked from Stefan Petre's (of eyecon.ro), improvements by eternicode",
-  "version": "1.5.0-dev",
+  "name": "bootstrap3-datepicker-gulp",
+  "description": "Forked bootstrap-datepicker for use with gulp and scss.",
+  "version": "1.0.0",
   "license": "Apache-2.0",
   "keywords": [
     "datepicker",
