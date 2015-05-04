@@ -86,32 +86,32 @@
 	table tr td {
 		&.day:hover,
 		&.day.focused {
-			background: @gray-lighter;
+			background: $gray-lighter;
 			cursor: pointer;
 		}
 		&.old,
 		&.new {
-			color: @btn-link-disabled-color;
+			color: $btn-link-disabled-color;
 		}
 		&.disabled,
 		&.disabled:hover {
 			background: none;
-			color: @btn-link-disabled-color;
+			color: $btn-link-disabled-color;
 			cursor: default;
 		}
 		&.highlighted {
-			background: @state-info-bg;
+			background: $state-info-bg;
 			border-radius: 0;
 		}
 		&.today,
 		&.today:hover,
 		&.today.disabled,
 		&.today.disabled:hover {
-			@today-bg: lighten(orange, 30%);
-			.button-variant(#000, @today-bg, darken(@today-bg, 20%));
+			$today-bg: lighten(orange, 30%);
+			@include button-variant(#000, $today-bg, darken($today-bg, 20%));
 		}
 		&.today:hover:hover { // Thank bootstrap 2.0 for this selector...
-			// TODO: Bump min BS to 2.1, use @textColor in buttonBackground above
+			// TODO: Bump min BS to 2.1, use $textColor in buttonBackground above
 			color: #000;
 		}
 		&.today.active:hover {
@@ -121,29 +121,29 @@
 		&.range:hover,
 		&.range.disabled,
 		&.range.disabled:hover {
-			background: @gray-lighter;
+			background: $gray-lighter;
 			border-radius: 0;
 		}
 		&.range.today,
 		&.range.today:hover,
 		&.range.today.disabled,
 		&.range.today.disabled:hover {
-			@today-bg: mix(orange, @gray-lighter, 50%);
-			.button-variant(#000, @today-bg, darken(@today-bg, 20%));
+			$today-bg: mix(orange, $gray-lighter, 50%);
+			@include button-variant(#000, $today-bg, darken($today-bg, 20%));
 			border-radius: 0;
 		}
 		&.selected,
 		&.selected:hover,
 		&.selected.disabled,
 		&.selected.disabled:hover {
-			.button-variant(#fff, @gray-light, @gray);
+			@include button-variant(#fff, $gray-light, $gray);
 			text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 		}
 		&.active,
 		&.active:hover,
 		&.active.disabled,
 		&.active.disabled:hover {
-			.button-variant(@btn-primary-color, @btn-primary-bg, @btn-primary-border);
+			@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 			text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 		}
 		span {
@@ -156,24 +156,24 @@
 			cursor: pointer;
 			border-radius: 4px;
 			&:hover {
-				background: @gray-lighter;
+				background: $gray-lighter;
 			}
 			&.disabled,
 			&.disabled:hover {
 				background: none;
-				color: @btn-link-disabled-color;
+				color: $btn-link-disabled-color;
 				cursor: default;
 			}
 			&.active,
 			&.active:hover,
 			&.active.disabled,
 			&.active.disabled:hover {
-				.button-variant(@btn-primary-color, @btn-primary-bg, @btn-primary-border);
+				@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 				text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 			}
 			&.old,
 			&.new {
-				color: @btn-link-disabled-color;
+				color: $btn-link-disabled-color;
 			}
 		}
 	}
@@ -186,7 +186,7 @@
 	tfoot tr th {
 		cursor: pointer;
 		&:hover {
-			background: @gray-lighter;
+			background: $gray-lighter;
 		}
 	}
 
@@ -221,12 +221,12 @@
 		min-width: 16px;
 		padding: 4px 5px;
 		font-weight: normal;
-		line-height: @line-height-base;
+		line-height: $line-height-base;
 		text-align: center;
 		text-shadow: 0 1px 0 #fff;
 		vertical-align: middle;
-		background-color: @input-group-addon-bg;
-		border: solid @input-group-addon-border-color;
+		background-color: $input-group-addon-bg;
+		border: solid $input-group-addon-border-color;
 		border-width: 1px 0;
 		margin-left: -5px;
 		margin-right: -5px;
