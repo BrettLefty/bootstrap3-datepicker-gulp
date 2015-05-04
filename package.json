@@ -1,7 +1,7 @@
 {
   "name": "bootstrap3-datepicker-gulp",
   "description": "Forked bootstrap-datepicker for use with gulp and scss.",
-  "version": "1.5.0",
+  "version": "1.5.2",
   "license": "Apache-2.0",
   "keywords": [
     "datepicker",
